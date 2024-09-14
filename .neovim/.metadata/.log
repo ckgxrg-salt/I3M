@@ -1,0 +1,250 @@
+!SESSION 2024-09-12 11:03:37.580 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.3
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -data /home/ckgxrg/Documents/Codes/I3M/.neovim
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:38.819
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:38.940
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:38.970
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:38.971
+!MESSAGE Initializing Java Language Server 1.38.0.202408011337
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:38.972
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.609
+!MESSAGE ProjectRegistryRefreshJob finished 637ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.623
+!MESSAGE Started org.eclipse.buildship.core 13ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.633
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.633
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.649
+!MESSAGE RepositoryRegistryUpdateJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.652
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:39.664
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:40.300
+!MESSAGE No previous Gradle project at /home/ckgxrg/Documents/Codes/I3M, it must be synchronized
+
+!ENTRY org.eclipse.buildship.core 2 1 2024-09-12 11:03:40.331
+!MESSAGE Synchronize project I3M failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:230)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:197)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:105)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:86)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:463)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:339)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:223)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:164)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:277)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.importRootProject(ImportRootProjectOperation.java:95)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2471)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 16 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:211)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:95)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:305)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:291)
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 22 more
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:40.341
+!MESSAGE Workspace initialized in 693ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:40.352
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:40.376
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:40.419
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2024-09-12 11:03:41.040
+!MESSAGE Command _java.reloadBundles.command not supported on client
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:41.155
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:41.156
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:41.343
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:42.071
+!MESSAGE begin problem for /I3M.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:42.074
+!MESSAGE 1 problems reported for /I3M.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:03:42.078
+!MESSAGE Validated 1. Took 133 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:00.472
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:00.517
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:00.517
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:00.523
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2024-09-12 11:07:17.777 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.3
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -data /home/ckgxrg/Documents/Codes/I3M/.neovim
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:18.948
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.073
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.104
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.105
+!MESSAGE Initializing Java Language Server 1.38.0.202408011337
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.105
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.741
+!MESSAGE ProjectRegistryRefreshJob finished 635ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.755
+!MESSAGE Started org.eclipse.buildship.core 14ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.764
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.764
+!MESSAGE Non-Static Commands: [java.project.import, java.project.changeImportedProjects, java.navigate.openTypeHierarchy, java.project.resolveStackTraceLocation, java.edit.handlePasteEvent, java.edit.stringFormatting, java.project.getSettings, java.project.resolveWorkspaceSymbol, java.project.upgradeGradle, java.project.createModuleInfo, java.vm.getAllInstalls, java.edit.organizeImports, java.project.refreshDiagnostics, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.updateSettings, java.project.getAll, java.reloadBundles, java.project.isTestFile, java.project.resolveText, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.smartSemicolonDetection, java.project.updateSourceAttachment, java.project.updateClassPaths, java.decompile, java.protobuf.generateSources, java.project.resolveSourceAttachment, java.project.updateJdk, java.project.addToSourcePath, java.completion.onDidSelect]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.783
+!MESSAGE RepositoryRegistryUpdateJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.786
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:19.802
+!MESSAGE Importing Gradle project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:20.483
+!MESSAGE No previous Gradle project at /home/ckgxrg/Documents/Codes/I3M, it must be synchronized
+
+!ENTRY org.eclipse.buildship.core 2 1 2024-09-12 11:07:20.506
+!MESSAGE Synchronize project I3M failed due to an error while importing the root project.
+!STACK 0
+org.eclipse.buildship.core.internal.ImportRootProjectException: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:53)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.runInToolingApi(DefaultGradleBuild.java:230)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager$WorkspaceRunnableAdapter.run(DefaultToolingApiOperationManager.java:58)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.buildship.core.internal.operation.DefaultToolingApiOperationManager.run(DefaultToolingApiOperationManager.java:39)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild$SynchronizeOperation.run(DefaultGradleBuild.java:197)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:105)
+	at org.eclipse.buildship.core.internal.DefaultGradleBuild.synchronize(DefaultGradleBuild.java:86)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.startSynchronization(GradleProjectImporter.java:463)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importDir(GradleProjectImporter.java:339)
+	at org.eclipse.jdt.ls.core.internal.managers.GradleProjectImporter.importToWorkspace(GradleProjectImporter.java:223)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.importProjects(ProjectsManager.java:164)
+	at org.eclipse.jdt.ls.core.internal.managers.ProjectsManager.initializeProjects(ProjectsManager.java:126)
+	at org.eclipse.jdt.ls.core.internal.handlers.InitHandler$1.runInWorkspace(InitHandler.java:277)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.buildship.core.internal.GradlePluginsRuntimeException: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:128)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.importRootProject(ImportRootProjectOperation.java:95)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation$1.run(ImportRootProjectOperation.java:68)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2471)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.runInWorkspace(ImportRootProjectOperation.java:58)
+	at org.eclipse.buildship.core.internal.workspace.ImportRootProjectOperation.run(ImportRootProjectOperation.java:51)
+	... 16 more
+Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:211)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:95)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:305)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:291)
+	at org.eclipse.buildship.core.internal.workspace.DefaultWorkspaceOperations.createProject(DefaultWorkspaceOperations.java:113)
+	... 22 more
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:20.518
+!MESSAGE Workspace initialized in 736ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:20.528
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2024-09-12 11:07:21.195
+!MESSAGE Command _java.reloadBundles.command not supported on client
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:21.198
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:21.198
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:21.275
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:21.913
+!MESSAGE begin problem for /I3M.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:21.916
+!MESSAGE 1 problems reported for /I3M.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:07:21.920
+!MESSAGE Validated 1. Took 44 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:10:38.573
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:10:38.586
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:10:38.596
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-09-12 11:10:38.601
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:

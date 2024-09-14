@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "i3m",
+	"version": "${version}",
+	"name": "I3M",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/i3m/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.ckgxrg.i3m.I3M"
+		],
+		"client": [
+			"io.ckgxrg.i3m.I3MClient"
+		]
+	},
+	"mixins": [
+		"i3m.mixins.json",
+		{
+			"config": "i3m.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
