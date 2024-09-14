@@ -7,6 +7,14 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.state.StateManager;
+import net.minecraft.util.ActionResult;
+import net.minecraft.world.World;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.entity.BlockEntity;
+
+import io.ckgxrg.i3m.block.blockentity.MQTTBlockEntity;
 
 public abstract class MQTTBlock extends BlockWithEntity {
 
@@ -30,4 +38,14 @@ public abstract class MQTTBlock extends BlockWithEntity {
     	protected BlockRenderType getRenderType(BlockState state) {
         	return BlockRenderType.MODEL;
     	}
+	
+	/* Should the NBT value be manually updated, right-click the block to manually apply the change.
+	 * 若手动修改NBT数据, 可通过右击强制刷新数据。*/
+	@Override
+	protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
+		BlockEntity e = world.getBlockEntity(pos);
+		if(e instanceof MQTTBlockEntity)
+			((MQTTBlockEntity) e).sync();
+		return ActionResult.PASS;
+	}
 }

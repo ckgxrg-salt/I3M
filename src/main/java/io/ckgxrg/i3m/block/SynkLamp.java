@@ -25,7 +25,7 @@ public class SynkLamp extends MQTTBlock {
 	};
 	
 	public SynkLamp() {
-		super(AbstractBlock.Settings.create().luminance(currentLuminance()).sounds(BlockSoundGroup.GLASS));
+		super(AbstractBlock.Settings.create().luminance(currentLuminance()).sounds(BlockSoundGroup.GLASS).nonOpaque());
 	}
 
 	@Override

@@ -15,6 +15,8 @@ public class SynkLampBlockEntity extends MQTTBlockEntity {
 
 	public SynkLampBlockEntity(BlockPos pos, BlockState state) {
 		super(I3MBlockEntities.SYNKLAMP, pos, state);
+		luminance = 0;
+		this.value = "0.0";
 	}
 
 	/* Update method for SynkLamp, which will convert the real-life brightness into
@@ -25,11 +27,14 @@ public class SynkLampBlockEntity extends MQTTBlockEntity {
 	@Override
 	public void update(String value) {
 		super.update(value);
-		mapAndSync();
+		sync();
 	}
 	// Usually we don't need to invoke this alone.
-	public void mapAndSync() {
+	@Override
+	public void sync() {
 		luminance = (int)Math.floor(Double.valueOf(this.value) * 15d / LIGHT_RESISTOR_UPPER_CAP);
+		if(luminance > 15) luminance = 15;
+		if(luminance < 0) luminance = 0;
 		World world = this.getWorld();
 		BlockPos pos = this.getPos();
 		world.setBlockState(pos, world.getBlockState(pos).with(SynkLamp.BRIGHTNESS, luminance));

@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"connected=false": { "model": "i3m:block/xtinguisher/disconnected" },
+		"connected=true,status=absense": { "model": "i3m:block/xtinguisher/absense" },
+		"connected=true,status=malfunction": { "model": "i3m:block/xtinguisher/malfunction" },
+		"connected=true,status=good": { "model": "i3m:block/xtinguisher/good" }
+	}
+}

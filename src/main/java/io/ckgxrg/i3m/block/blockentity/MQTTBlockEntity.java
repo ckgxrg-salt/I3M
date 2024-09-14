@@ -12,7 +12,7 @@ import net.minecraft.network.listener.ClientPlayPacketListener;
 
 import org.jetbrains.annotations.Nullable;
 
-public class MQTTBlockEntity extends BlockEntity {
+public abstract class MQTTBlockEntity extends BlockEntity {
 
 	/*
 	 * All MQTT blocks will have to listen on a given topic. This field indicates it.
@@ -30,6 +30,9 @@ public class MQTTBlockEntity extends BlockEntity {
 
 	public MQTTBlockEntity(BlockEntityType<? extends BlockEntity> type, BlockPos pos, BlockState state) {
 		super(type, pos, state);
+		topic = "";
+		archiveName = "";
+		value = "";
 	}
 
 	// Getters / Setters
@@ -51,6 +54,7 @@ public class MQTTBlockEntity extends BlockEntity {
 		this.value = value;
 		markDirty();
 	}
+	public abstract void sync();
 
 	/* Basic NBT read / write.
 	 * 基本NBT数据读写。*/
@@ -63,10 +67,10 @@ public class MQTTBlockEntity extends BlockEntity {
 	}
 	@Override
 	public void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup wrapper) {
-		super.read(nbt, wrapper);
+		super.readNbt(nbt, wrapper);
 		topic = nbt.getString("mqtt_topic");
 		archiveName = nbt.getString("mqtt_archive");
-		value = nbt.getString("value");
+		value = nbt.getString("mqtt_value");
 	}
 	@Nullable
   	@Override

@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"connected=false": { "model": "i3m:block/synk_lamp/off" },
+		"connected=true": { "model": "i3m:block/synk_lamp/on" }
+	}
+}
