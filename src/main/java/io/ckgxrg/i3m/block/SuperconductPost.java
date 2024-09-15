@@ -43,7 +43,7 @@ public class SuperconductPost extends MQTTBlock {
 
 	@Override
     	public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        	return VoxelShapes.cuboid(0.0625f, 0f, 0.0625f, 0.8125f, 1f, 0.8125f);
+        	return VoxelShapes.cuboid(0.125f, 0f, 0.125f, 0.875f, 1f, 0.875f);
     	}
 
 	@Override
