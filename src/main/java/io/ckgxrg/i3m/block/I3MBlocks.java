@@ -12,6 +12,7 @@ public class I3MBlocks {
 
 	public static Block SYNKLAMP = register(new SynkLamp(), "synk_lamp", true);
 	public static Block XTINGUISHER = register(new Xtinguisher(), "xtinguisher", true);
+	public static Block SUPERCONDUCTPOST = register(new SuperconductPost(), "superconduct_post", true);
 
 	public static Block register(Block blk, String name, boolean itemAlso) {
 		Identifier id = Identifier.of(I3M.MOD_ID, name);

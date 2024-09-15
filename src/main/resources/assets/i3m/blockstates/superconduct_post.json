@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"connected=false": { "model": "i3m:block/superconduct_post/offline" },
+		"connected=true,status=empty": { "model": "i3m:block/superconduct_post/empty" },
+		"connected=true,status=partial": { "model": "i3m:block/superconduct_post/partial" },
+		"connected=true,status=full": { "model": "i3m:block/superconduct_post/full" }
+	}
+}

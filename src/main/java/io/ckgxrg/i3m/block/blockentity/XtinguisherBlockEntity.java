@@ -16,8 +16,8 @@ public class XtinguisherBlockEntity extends MQTTBlockEntity {
 		this.value = "0.0";
 	}
 
-	/* Update method for SynkLamp, which will convert the real-life brightness into
-	 * Minecraft luminance, then apply it to the block.
+	/* Update method for Xtinguisher, which will convert the real-life mass into
+	 * Minecraft blockstates, then apply it to the block.
 	 *
 	 * 灭火器X型的更新方法, 能够根据现实世界质量判断灭火器状态, 
 	 * 然后将其应用到方块。*/
@@ -29,9 +29,10 @@ public class XtinguisherBlockEntity extends MQTTBlockEntity {
 	// Usually we don't need to invoke this alone.
 	@Override
 	public void sync() {
-		Xtinguisher.Status status = Xtinguisher.Status.GOOD;
+		Xtinguisher.Status status;
 		if(Double.valueOf(this.value) < ABSENSE_MASS_CAP) status = Xtinguisher.Status.ABSENSE;
 		else if(Double.valueOf(this.value) < MALFUNCTION_MASS_CAP) status = Xtinguisher.Status.MALFUNCTION;
+		else status = Xtinguisher.Status.GOOD;
 		World world = this.getWorld();
 		BlockPos pos = this.getPos();
 		world.setBlockState(pos, world.getBlockState(pos).with(Xtinguisher.STATUS, status));
