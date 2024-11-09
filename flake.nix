@@ -12,14 +12,17 @@
         libGL
         glfw
         openal
-        stdenv.cc.cc.lib
+        jdk21
+        checkstyle
+        google-java-format
       ];
   in {
     devShell.x86_64-linux = pkgs.mkShell {
+      name = "fabricmc";
       packages = [];
       buildInputs = libs;
       shellHook = ''
-        nu
+        exec nu
       '';
       LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath libs;
     };
